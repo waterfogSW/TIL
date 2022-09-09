@@ -2,7 +2,7 @@
 
 Gradle 은 DAG(비순환 그래프)의 형태로 의존성을 찾아 빌드하는 빌드 자동화 도구다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/da065970-a04c-4ac5-a178-a2b4dd902539/Untitled.png)
+![image](https://user-images.githubusercontent.com/28651727/189249018-57d585f0-d222-497c-a9df-a1a6fdfbaa6f.png)
 
 gradle 패키지 매니저 설치(mac os)
 
