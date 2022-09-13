@@ -18,7 +18,6 @@ A → B(인터페이스)라는 의존관계를 갖는 구조일때, A가 생성�
 >
 > ApplicationContext는 빈 팩토리를 조금 더 확장한 개념입니다. 스프링의 AOP기능을 쉽게 이용할 수 있도록 해주고, MessageResource관리, 이벤트 발행 및 응용 계층을 위한 컨텍스트(ex WebApplicationContext)를 제공합니다. 따라서 Bean Factory라고 말할 때는 IoC의 기본기능에 초점을 맞추게 되고, ApplicationContext 라고 말하면 애플리케이션 전반에 걸쳐 모든 구성요소의 제어 작업을 담당하는 IoC엔진이라는 의미가 강조됩니다.
 
-[##_Image|kage@kzpQ3/btrLXOguvWh/IseylBehhktGevBIsGOFK1/img.png|CDM|1.3|{"originWidth":498,"originHeight":296,"style":"alignCenter","caption":"https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)"}_##]
 
 IoC컨테이너는 어떤 객체를 어떻게 관리해야할지에 대한 정보를 Configuration Metadata로부터 얻습니다. Configuration MetaData는 XML, 어노테이션, 또는 자바코드로 표현할 수 있습니다.
 
@@ -48,7 +47,7 @@ public class AppConfig {
 
 AOP는 프로그래밍 패러다임으로 공통관심사를 분리하여 모듈화를 이끌어 내는것입니다. 객체지향에서 모듈화의 단위를 클래스(Class)라고 본다면, AOP에서는 모듈화의 단위를 애스팩트(Aspect)로 봅니다. 애스팩트는 여러 객체와 타입에 걸친 공통 관심사(ex 트랜잭션 관리)의 모듈화를 가능하게 합니다.
 
-[##_Image|kage@bLg1NE/btrL2ouBeka/FWxnYlbvFtKAbsRGe1aLvK/img.png|CDM|1.3|{"originWidth":600,"originHeight":362,"style":"alignCenter","caption":"트랜잭션 프록시를 통한 메서드 호출 과정(https://docs.spring.io/spring-framework/docs/3.0.0.M4/reference/html/ch10s05.html)","filename":"Untitled.png"}_##]
+![Image](https://docs.spring.io/spring-framework/docs/3.0.0.M4/reference/html/images/tx.png)
 
 스프링에 적용된 가장 인기 있는 AOP의 적용대상은 [선언적 트랜잭션기능](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#transaction-declarative)입니다. 선언적 트랜잭션은 소스코드에 직접 트랜잭션 관련 로직을 넣어두지 않고 비즈니스 로직에서 분리해 냅니다. 비즈니스 로직을 담당하고 있는 객체는 트랜잭션을 어떻게 해야할지에 대한 구체적인 방법과 환경에 종속되지 않으며, 비즈니스 로직에 대한 테스트를 손쉽게 만들어낼 수 있게 됩니다.
 
